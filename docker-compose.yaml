@@ -1,0 +1,25 @@
+services:
+  backend_service:
+    build: .
+    image: shop_basic
+    platform: 'linux/amd64'
+    env_file:
+      - .env
+    ports:
+      - '8000:8000'
+    depends_on:
+      - postgres_service
+
+  postgres_service:
+    image: postgres:alpine
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+    ports:
+      - 5437:${PG_PORT}
+    volumes:
+      - drf_p21_pg_data:/var/lib/postgresql/data
+
+volumes:
+  drf_p21_pg_data:

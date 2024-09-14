@@ -1,0 +1,6 @@
+model, strialister, view, url
+
+document, doc sredialites, document view set, url
+
+
+pip install standard-distutils    if 3.12 python
