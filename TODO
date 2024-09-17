@@ -4,3 +4,19 @@ document, doc sredialites, document view set, url
 
 
 pip install standard-distutils    if 3.12 python
+
+
+
+
+
+
+
+
+WEBSOCKET
+poetry create new project
+
+install channels (poerty add ...)
+settings to asgi
+
+template (Documnetion)
+docker-redis run
